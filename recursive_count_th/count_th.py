@@ -5,8 +5,21 @@ Your function must utilize RECURSION. It CANNOT CONTAIN ANY LOOPS.
 '''
 
 def count_th(word):
-    counter = word.count('th')
-    print("Occurrences of 'th': " + str(counter))
+    string = 'th'
+    # if string in word == 0:
+    #     return 0
+    # elif string in word > 0:
+        
+    def counter(word, string, occurrences=[]):
+        w = len(word)
+        s = len(string)
+        string = 'th'
+        if string in w == 0:  # base case
+            return 0
+        elif string in word[0:s] > 0:  # recursive function
+            occurrences.append[word]
+        #     return counter(str1[n2-1:], str2 +1)
+        # return counter(str1[n2-1:], str2)
     
 count_th('ninth')
 count_th('seven')
