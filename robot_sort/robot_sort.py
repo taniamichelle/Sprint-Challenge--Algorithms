@@ -97,13 +97,7 @@ class SortingRobot:
         Sort the robot's list.
         """
         @classmethod
-        # self._list = l    
-        # self._item = None
-        # self._position = 0 
-        # compare item in current position with item in position +1
-        # if cur pos < pos1: move right
-        # if cur pos > pos1: swap item then move right
-        # if you can not move right any further: repeat steps
+        
         for i in range(len(self._list)-1, 0, -1):
             print('len(list): ', len(self._list))
             for j in range(i):
