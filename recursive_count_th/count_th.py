@@ -11,18 +11,18 @@ Your function must utilize RECURSION. It CANNOT CONTAIN ANY LOOPS.
 #     elif occurrences and occurrences[string] in word > 0:
 #         return occurrences[string]
 
-def count_th(word):
-    string = 'th'
-    occurrences = []
-    w = len(word)
-    s = len(string)
+# def count_th(word):
+#     string = 'th'
+#     occurrences = 0
+#     w = len(word)
+#     s = len(string)
 
-    if string not in word[0:s]:  # base case: if 'word' does not contain 'string' (which is equal to 'th'), return 0
-        return 0
-    elif string in word[0:s]:  # recursive function: if 'string'('th') is in 'word', add to occurrences list
-        occurrences.append(word)
+#     if string not in word[0:s]:  # base case: if 'word' does not contain 'string' (which is equal to 'th'), return 0
+#         return 0
+#     elif string in word[0:s]:  # recursive function: if 'string'('th') is in 'word', add to occurrences list
+#         occurrences = 1
     
-    return count_th(word[s-1:])
+#     return count_th(word[s-1:])
 
 
 # def count_th(word):
@@ -39,12 +39,6 @@ def count_th(word):
 #         #     return counter(str1[n2-1:], str2 +1)
 #         # return counter(str1[n2-1:], str2)
     
-count_th('ninth')
-count_th('seven')
-count_th('thenth')
-count_th('Thenth')
-count_th('THthThtH')
-count_th('htthth')
 
 # def find_max_profit(prices):
 #   current_min_price_so_far = prices[0] # price at zero index
@@ -58,11 +52,23 @@ count_th('htthth')
   
 #   return max_profit_so_far
 
-# def count_th(word):
-#     string = 'th'
-#     t = word[0]
-#     h = word[1]
-#     l = len(word) 
-#     if     
+def count_th(word):
+    # w = len(word)
+    # t = word[0]
+    # h = word[1]
+    # string = t + h
+    # occurrences = 0
+    # if string not in w:
+    #     return 0
+    # elif string in w == 1:
+    #     occurrences = 1
+    # elif string in w > 1:
+    #     return count_th(word)
     
 
+count_th('ninth')
+count_th('seven')
+count_th('thenth')
+count_th('Thenth')
+count_th('THthThtH')
+count_th('htthth')
