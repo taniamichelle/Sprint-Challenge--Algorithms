@@ -14,7 +14,7 @@ def count_th(word):
         w = len(word)
         s = len(string)
         string = 'th'
-        if string not in word[0:w]:  # base case
+        if string not in word[0:s]:  # base case
             return 0
         elif string in word[0:s] > 0:  # recursive function
             occurrences.append[word]
