@@ -7,11 +7,11 @@ Your function must utilize RECURSION. It CANNOT CONTAIN ANY LOOPS.
 def count_th(word):
     count = 0
     w = len(word)
-    i = word[0]
-    j = word[1]
-    if w == 0:
+    i = 0
+    j = 1
+    if word == 0:
         return 0
-    elif w > 0:
+    elif word > 0:
         if i == 't' and j == 'h':
             i = i+1
             j = j+1
@@ -20,7 +20,16 @@ def count_th(word):
             i = i+1
             j = j+1
             count = 0
-    return count 
+            
+        count_th(word)   
+        return count 
+    
+
+# def helper(i, j, count):
+    # if i == 't' and j == 'h':
+    #         i = i+1
+    #         j = j+1
+            # count = count+1
 
 # def count_th(word):
 #     string = 'th'
