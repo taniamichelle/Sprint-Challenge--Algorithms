@@ -2,13 +2,15 @@
 
 ## Exercise I
 
-a) O(log n)
+a) O(n)
 
 
-b) O(n^c)
+b) O(log n)
 
 
-c) O(n!)
+c) O(n)
+
+
 
 ## Exercise II
 Suppose that you have an n-story building and plenty of eggs. Suppose also that an egg gets broken if it is thrown off floor f or higher, and doesn't get broken if dropped off a floor less than floor f. Devise a strategy to determine the value of f such that the number of dropped + broken eggs is minimized.
@@ -37,4 +39,4 @@ PLANNING:
                 => the floor below is 'f'
 
 RUNTIME COMPLEXITY:
-O(n^c)
+O(n log n)

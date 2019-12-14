@@ -7,8 +7,8 @@ pseudocode with respect to the input size n of each of the following:
 
 ```python
 a)  a = 0                   # a = 0             ==> O(1)
-    while (a < n * n * n):  # while (a < n^3):  ==> O(n^2)
-      a = a + n * n         # a = a + n^2       ==> O
+    while (a < n * n * n):  # while (a < n^3):  ==> O(n)
+      a = a + n * n         # a = a + n^2       ==> O(1)
 
 
 ```

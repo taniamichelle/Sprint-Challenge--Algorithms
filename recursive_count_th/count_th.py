@@ -5,31 +5,32 @@ Your function must utilize RECURSION. It CANNOT CONTAIN ANY LOOPS.
 '''
 
 def count_th(word):
-    count = 0
-    w = len(word)
-    i = 0
-    j = 1
+    t = word[0]
+    h = word[1]
+    
+    # if word == 0:
+    #     return 0
+    # elif word !=0:
+    #     if t and h:
+    #     word.split('th') == 0:
+    #         return 0
+    #     elif word.split('th') == 0:
+    #         return 1 + count_th(word) 
+        
     if word == 0:
         return 0
-    elif word > 0:
-        if i == 't' and j == 'h':
-            i = i+1
-            j = j+1
-            count = count+1
-        elif i != 't' or j != 'h': 
-            i = i+1
-            j = j+1
-            count = 0
-            
-        count_th(word)   
-        return count 
+    elif word !=0:
+        if word.split('th') == 0:
+            return 0
+        elif word.split('th') == 0:
+            return 1 + count_th(word) 
     
-
-# def helper(i, j, count):
-    # if i == 't' and j == 'h':
-    #         i = i+1
-    #         j = j+1
-            # count = count+1
+    # if word == 0:
+    #     return 0
+    # elif word != 0:
+    #     if word.split('th') == 0:
+    # return 1 + count_th(word.split('th')) 
+    
 
 # def count_th(word):
 #     string = 'th'
@@ -43,21 +44,6 @@ def count_th(word):
 #         occurrences = 1
     
 #     return count_th(word[s-1:])
- 
-
-# def count_th(word):
-    # w = len(word)
-    # t = word[0]
-    # h = word[1]
-    # string = t + h
-    # occurrences = 0
-    # if string not in w:
-    #     return 0
-    # elif string in w == 1:
-    #     occurrences = 1
-    # elif string in w > 1:
-    #     return count_th(word)
-    
 
 count_th('ninth')
 count_th('seven')
