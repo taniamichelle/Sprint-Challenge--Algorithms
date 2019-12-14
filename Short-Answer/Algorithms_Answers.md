@@ -5,7 +5,7 @@
 a) O(n)
 
 
-b) O(log n)
+b) O(n log n)
 
 
 c) O(n)
@@ -39,4 +39,4 @@ PLANNING:
                 => the floor below is 'f'
 
 RUNTIME COMPLEXITY:
-O(n log n)
+O(log n) b/c halving n each time loop is run

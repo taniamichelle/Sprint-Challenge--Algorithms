@@ -9,17 +9,15 @@ pseudocode with respect to the input size n of each of the following:
 a)  a = 0                   # a = 0             ==> O(1)
     while (a < n * n * n):  # while (a < n^3):  ==> O(n)
       a = a + n * n         # a = a + n^2       ==> O(1)
-
-
 ```
 
 ```
 b)  sum = 0              #O(1)
     for i in range(n):   #O(n)
-      j = 1
-      while j < n:      
-        j *= 2
-        sum += 1
+      j = 1              #O(1)
+      while j < n:      #O(log n)
+        j *= 2          #O(1)
+        sum += 1        #O(1)
 ```
 
 ```

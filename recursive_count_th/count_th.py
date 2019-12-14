@@ -5,9 +5,30 @@ Your function must utilize RECURSION. It CANNOT CONTAIN ANY LOOPS.
 '''
 
 def count_th(word):
-    t = word[0]
-    h = word[1]
+    if len(word) <= 1:
+        return 0
+    else:
+        if word[0:2] == 'th':
+            return 1 + count_th(word[2:])
+        else:
+            return count_th(word[1:])
+        # return word.find('th')
+
     
+print(count_th('tani'))
+print(count_th('tenth'))
+print(count_th('t')) 
+print(count_th('Thenth'))    
+print(count_th('THthThtH'))   
+print(count_th('htthth'))   
+
+# count_th('ninth')
+# count_th('seven')
+# count_th('thenth')
+# count_th('Thenth')
+# count_th('THthThtH')
+# count_th('htthth')
+
     # if word == 0:
     #     return 0
     # elif word !=0:
@@ -17,13 +38,13 @@ def count_th(word):
     #     elif word.split('th') == 0:
     #         return 1 + count_th(word) 
         
-    if word == 0:
-        return 0
-    elif word !=0:
-        if word.split('th') == 0:
-            return 0
-        elif word.split('th') == 0:
-            return 1 + count_th(word) 
+    # if word == 0:
+    #     return 0
+    # elif word !=0:
+    #     if word.split('th') == 0:
+    #         return 0
+    #     elif word.split('th') == 0:
+    #         return 1 + count_th(word) 
     
     # if word == 0:
     #     return 0
@@ -45,9 +66,3 @@ def count_th(word):
     
 #     return count_th(word[s-1:])
 
-count_th('ninth')
-count_th('seven')
-count_th('thenth')
-count_th('Thenth')
-count_th('THthThtH')
-count_th('htthth')
