@@ -99,16 +99,16 @@ class SortingRobot:
         while self.can_move_right == True:
             if self.compare_item > 1:
                 self.swap_item
-                # self.move_right 
+                self.move_right 
             elif self.compare_item <= 0:
-                # self.move_right
-                continue
-            self.move_right       
-        if self.can_move_right == False:
+                self.move_right
+            break  
+        while self.can_move_right == False:
             if self.can_move_left == True:
                 self.move_left
             elif self.can_move_left == False:
-                robot.sort()
+                break
+        return robot.sort()
                 
 
 if __name__ == "__main__":
