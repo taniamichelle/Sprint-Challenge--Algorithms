@@ -93,22 +93,46 @@ class SortingRobot:
         return self._light == "ON"
 
     def sort(self):
-        """
-        Sort the robot's list.
-        """
-        while self.can_move_right == True:  
-            if self.compare_item > 1:       
-                self.swap_item
-                self.move_right 
-            elif self.compare_item <= 0:
-                self.move_right 
-            while self.can_move_right == False:
-                if self.can_move_left == True:
-                    self.move_left
-                elif self.can_move_left == False:
-                    return robot.sort()
-                break    
+        self.swap_item() # pos:[0], holding: #5 , table: #N
+        self.set_light_on() # signifier to allow robot to enter while loop
+        # self.move_right()
 
+        
+        while self.light_is_on(): # pos:[0], holding: #5 , table: #N
+            self.move_right() # pos:[1], holding: #5 , table: #1
+            while self.can_move_right() == True: # while able to move right
+                # self.move_right()                # move right. at position 1(5 in hand; 1 in front)
+                if self.compare_item() == -1: # if item in your hand is smaller
+                    self.move_left()          # move left
+                    self.swap_item()          # swap item
+                    self.move_right()         # move right
+                    self.swap_item()          # swap item
+                    self.move_right()
+                    
+                if self.compare_item() == 0: # if item in your hand is same
+                    self.move_right()          # move right
+                
+                if self.compare_item() == 1: # pos:[3], holding: #6 , table: #3 
+                    self.swap_item()           # pos:[3], holding: #3 , table: #6
+                    self.move_left()           # pos:[2], holding: #3 , table: #N
+                    self.swap_item()           # pos:[2], holding: #N , table: #3
+                    self.move_right()          # pos:[3], holding: #N , table: #6
+                    self.swap_item()           # pos:[3], holding: #6 , table: #N
+                    self.move_right()          # pos:[4], holding: #6 , table: #2
+            
+            while self.can_move_right() == False:
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+                if self.can_move_left() == True:
+                    self.move_left()
+                if self.can_move_left == False:
+                    break
+            
+            self.set_light_off()
+            
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
